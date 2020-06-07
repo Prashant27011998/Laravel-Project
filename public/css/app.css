@@ -9,16 +9,31 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+  .show{
+    display:block;
+}
 .forms{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 2vw;
 }
+.hide{
+    display:none;
+}
 @media only screen and (max-width: 768px) {
     .row{
-        top:30%;
-        padding: 4vw;
+        position: static;
+      
+        -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+        
     }
     .forms{
         box-shadow: none;
+    }
+    .hide{
+        display:block;
+    }
+    .show{
+        display:none;
     }
 }

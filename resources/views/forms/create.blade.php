@@ -1,12 +1,12 @@
-
+<p class="h3 text-center py-4 hide"><b>Basic Information</b></p>
 
 <div class="row">
     @extends('layouts.app')
     @section('content')
     <div class="col-sm-2"></div>
     <div class="col-sm-8 forms">
+    <p class="h3 text-center py-4 show"><b>Basic Information</b></p>
     @include('inc.messages')
-    <p class="h3 text-center py-4"><b>Basic Information</b></p>
     {!! Form::open(['action' => 'ATGController@store', 'method' => 'POST']) !!}
     
         <div class="form-group">
