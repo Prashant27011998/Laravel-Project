@@ -21,7 +21,7 @@ Route::get('/success', function () {
 });
 
 
-Route::resource('posts', 'ATGController');
+Route::resource('forms', 'ATGController');
 
 
 

@@ -1,3 +1,9 @@
+<html>
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet"> 
+    </head>
+<body>
 <?php
 
 /**
@@ -58,3 +64,7 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
+
+?>
+</body>
+</html>
