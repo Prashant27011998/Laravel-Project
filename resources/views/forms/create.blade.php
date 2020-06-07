@@ -5,9 +5,10 @@
     @section('content')
     <div class="col-sm-2"></div>
     <div class="col-sm-8 forms">
+    @include('inc.messages')
     <p class="h3 text-center py-4"><b>Basic Information</b></p>
     {!! Form::open(['action' => 'ATGController@store', 'method' => 'POST']) !!}
-    @include('inc.messages')
+    
         <div class="form-group">
             {{Form::label('name', 'Full Name')}}
             {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}
