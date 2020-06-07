@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css);
+.row {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+   
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+.forms{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2vw;
+}
+@media only screen and (max-width: 768px) {
+    .row{
+        top:30%;
+        padding: 4vw;
+    }
+    .forms{
+        box-shadow: none;
+    }
+}
