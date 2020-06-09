@@ -8,12 +8,15 @@ class Post extends Model
 {
     // Table Name
     protected $table = 'posts';
-    // Primary Key
-    public $primaryKey = 'id';
-    // Timestamps
-    public $timestamps = true;
+    
+    public $timestamps = false;
 
-    public function user(){
-        return $this->belongsTo('App\User');
-    }
+    protected $fillable = [
+        'id',
+        'name',
+        'email',
+        'pin',
+        'created_at',
+        'updated_at',
+    ];
 }

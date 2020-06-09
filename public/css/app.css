@@ -22,7 +22,7 @@
 @media only screen and (max-width: 768px) {
     .row{
         position: static;
-      
+        
         -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
         

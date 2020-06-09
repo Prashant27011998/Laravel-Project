@@ -1,14 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Traits\PhpTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Post;
 use DB;
 
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
+
 class ATGController extends Controller
 {
+    use PhpTrait;
     /**
      * Display a listing of the resource.
      *
@@ -37,18 +41,22 @@ class ATGController extends Controller
      */
     public function store(Request $request)
     {
+        
 
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:posts,email',
-            'pin' => 'required|digits:6|integer',
-        ]);
-       $post = new Post;
-       $post->name = $request->input('name');
-       $post->email = $request->input('email');
-       $post->pin = $request->input('pin');
-       $post->save();
-       return redirect('/success')->with('success','Data has been saved successfully');
+        $validator=$this->verify($request);
+        
+        if ($validator->fails()){
+            
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $this->Savee($request); 
+        return redirect('/success')->with('success','Data has been saved successfully');
+        
+        
+
+
+       
     }
 
     /**
