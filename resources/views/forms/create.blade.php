@@ -72,7 +72,6 @@
 
 
         $.ajax({
-
         type:'post',
 
         url:'{{ url("created") }}',

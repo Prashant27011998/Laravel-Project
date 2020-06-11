@@ -21,7 +21,7 @@ Route::get('/success', function () {
 });
 
 
-Route::resource('forms', 'ATGController');
+// Route::resource('forms', 'ATGController');
 // Route::get('/verify','WebServicesController@verify');
 
 Route::get('created', 'WebServicesController@create');
