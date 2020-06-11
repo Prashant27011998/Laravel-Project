@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
+  <meta name="csrf_token" content="{{ csrf_token() }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title></title>
@@ -57,7 +58,7 @@
      $(document).ready(function(){
       $(".btn-primary").click(function(e){
         e.preventDefault();
-        
+            
             $('#names').html("");
             $('#emails').html("");
             $('#pins').html("");
@@ -72,9 +73,9 @@
 
         $.ajax({
 
-        method:'post',
+        type:'post',
 
-        url:'/created',
+        url:'{{ url("created") }}',
 
         data:$('#email_us').serialize(),
 
